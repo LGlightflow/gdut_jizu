@@ -1,0 +1,32 @@
+|f_adder
+ain => h_adder:u1.a
+bin => h_adder:u1.b
+cin => h_adder:u2.b
+cout <= or2a:u3.c
+sum <= h_adder:u2.so
+
+
+|f_adder|h_adder:u1
+a => Mux0.IN4
+a => Mux1.IN4
+b => Mux0.IN5
+b => Mux1.IN5
+co <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+so <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|f_adder|h_adder:u2
+a => Mux0.IN4
+a => Mux1.IN4
+b => Mux0.IN5
+b => Mux1.IN5
+co <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+so <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|f_adder|or2a:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+

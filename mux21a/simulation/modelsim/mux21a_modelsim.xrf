@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, D:/project/program/QUARTUS/mux21a/mux21a.vhd
+source_file = 1, D:/project/program/QUARTUS/mux21a/Waveform.vwf
+source_file = 1, D:/project/program/QUARTUS/mux21a/Waveform1.vwf
+source_file = 1, e:/quartus/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, e:/quartus/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, e:/quartus/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, e:/quartus/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, D:/project/program/QUARTUS/mux21a/db/mux21a.cbx.xml
+design_name = mux21a
+instance = comp, \y~output\, y~output, mux21a, 1
+instance = comp, \s~input\, s~input, mux21a, 1
+instance = comp, \b~input\, b~input, mux21a, 1
+instance = comp, \a~input\, a~input, mux21a, 1
+instance = comp, \y~0\, y~0, mux21a, 1
+instance = comp, \~QUARTUS_CREATED_GND~I\, ~QUARTUS_CREATED_GND~I, mux21a, 1

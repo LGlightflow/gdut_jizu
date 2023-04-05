@@ -1,0 +1,181 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -13.510
+TNS   : -334.207
+
+Type  : Slow 1100mV 85C Model Setup 'controller:ctl|mem_rw'
+Slack : -13.403
+TNS   : -5644.017
+
+Type  : Slow 1100mV 85C Model Setup 'reset'
+Slack : -11.994
+TNS   : -4000.803
+
+Type  : Slow 1100mV 85C Model Hold 'reset'
+Slack : -2.715
+TNS   : -320.064
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : -1.240
+TNS   : -16.788
+
+Type  : Slow 1100mV 85C Model Hold 'controller:ctl|mem_rw'
+Slack : -0.535
+TNS   : -1.272
+
+Type  : Slow 1100mV 85C Model Recovery 'controller:ctl|mem_rw'
+Slack : -3.325
+TNS   : -127.101
+
+Type  : Slow 1100mV 85C Model Removal 'controller:ctl|mem_rw'
+Slack : -1.875
+TNS   : -38.142
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.724
+TNS   : -58.403
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'reset'
+Slack : -0.527
+TNS   : -12.024
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'controller:ctl|mem_rw'
+Slack : -0.123
+TNS   : -0.127
+
+Type  : Slow 1100mV 0C Model Setup 'controller:ctl|mem_rw'
+Slack : -13.519
+TNS   : -5745.268
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -13.392
+TNS   : -330.518
+
+Type  : Slow 1100mV 0C Model Setup 'reset'
+Slack : -12.107
+TNS   : -4056.440
+
+Type  : Slow 1100mV 0C Model Hold 'reset'
+Slack : -2.774
+TNS   : -373.554
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : -1.330
+TNS   : -18.877
+
+Type  : Slow 1100mV 0C Model Hold 'controller:ctl|mem_rw'
+Slack : -0.634
+TNS   : -1.634
+
+Type  : Slow 1100mV 0C Model Recovery 'controller:ctl|mem_rw'
+Slack : -3.561
+TNS   : -136.760
+
+Type  : Slow 1100mV 0C Model Removal 'controller:ctl|mem_rw'
+Slack : -1.877
+TNS   : -32.613
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.724
+TNS   : -58.167
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'reset'
+Slack : -0.438
+TNS   : -10.236
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'controller:ctl|mem_rw'
+Slack : -0.131
+TNS   : -0.383
+
+Type  : Fast 1100mV 85C Model Setup 'controller:ctl|mem_rw'
+Slack : -5.970
+TNS   : -2335.985
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -5.613
+TNS   : -136.935
+
+Type  : Fast 1100mV 85C Model Setup 'reset'
+Slack : -5.386
+TNS   : -1681.415
+
+Type  : Fast 1100mV 85C Model Hold 'reset'
+Slack : -1.350
+TNS   : -126.170
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : -0.570
+TNS   : -8.156
+
+Type  : Fast 1100mV 85C Model Hold 'controller:ctl|mem_rw'
+Slack : -0.276
+TNS   : -0.714
+
+Type  : Fast 1100mV 85C Model Recovery 'controller:ctl|mem_rw'
+Slack : -1.634
+TNS   : -56.640
+
+Type  : Fast 1100mV 85C Model Removal 'controller:ctl|mem_rw'
+Slack : -0.900
+TNS   : -26.646
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'reset'
+Slack : -0.632
+TNS   : -94.558
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.086
+TNS   : -3.980
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'controller:ctl|mem_rw'
+Slack : 0.138
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'controller:ctl|mem_rw'
+Slack : -5.374
+TNS   : -2113.318
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -5.005
+TNS   : -118.764
+
+Type  : Fast 1100mV 0C Model Setup 'reset'
+Slack : -4.790
+TNS   : -1480.071
+
+Type  : Fast 1100mV 0C Model Hold 'reset'
+Slack : -1.328
+TNS   : -153.153
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : -0.562
+TNS   : -8.336
+
+Type  : Fast 1100mV 0C Model Hold 'controller:ctl|mem_rw'
+Slack : -0.288
+TNS   : -0.653
+
+Type  : Fast 1100mV 0C Model Recovery 'controller:ctl|mem_rw'
+Slack : -1.521
+TNS   : -57.656
+
+Type  : Fast 1100mV 0C Model Removal 'controller:ctl|mem_rw'
+Slack : -0.760
+TNS   : -18.584
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'reset'
+Slack : -0.481
+TNS   : -63.910
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.086
+TNS   : -4.171
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'controller:ctl|mem_rw'
+Slack : 0.176
+TNS   : 0.000
+
+------------------------------------------------------------

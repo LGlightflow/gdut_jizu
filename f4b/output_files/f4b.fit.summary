@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sat Nov 19 08:47:36 2022
+Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Revision Name : f4b
+Top-level Entity Name : f4b
+Family : Cyclone V
+Device : 5CGXFC7C7F23C8
+Timing Models : Final
+Logic utilization (in ALMs) : 87 / 56,480 ( < 1 % )
+Total registers : 120
+Total pins : 147 / 268 ( 55 % )
+Total virtual pins : 0
+Total block memory bits : 12,288 / 7,024,640 ( < 1 % )
+Total RAM Blocks : 2 / 686 ( < 1 % )
+Total DSP Blocks : 1 / 156 ( < 1 % )
+Total HSSI RX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 6 ( 0 % )
+Total HSSI TX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 6 ( 0 % )
+Total PLLs : 0 / 13 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

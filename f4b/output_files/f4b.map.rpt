@@ -1,0 +1,598 @@
+Analysis & Synthesis report for f4b
+Sat Nov 19 08:45:16 2022
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for LPM_ROM:inst13|altrom:srom|altsyncram:rom_block|altsyncram_r661:auto_generated
+ 14. Source assignments for LPM_RAM_DQ:inst14|altram:sram|altsyncram:ram_block|altsyncram_7pf1:auto_generated
+ 15. Parameter Settings for User Entity Instance: LPM_ROM:inst13
+ 16. Parameter Settings for User Entity Instance: LPM_RAM_DQ:inst14
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Nov 19 08:45:16 2022       ;
+; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Revision Name                   ; f4b                                         ;
+; Top-level Entity Name           ; f4b                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 136                                         ;
+; Total pins                      ; 147                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 12,288                                      ;
+; Total DSP Blocks                ; 1                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; f4b                ; f4b                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------+---------+
+; PC.vhd                           ; yes             ; User VHDL File                         ; D:/project/program/QUARTUS/f4b/PC.vhd                            ;         ;
+; MBR.vhd                          ; yes             ; User VHDL File                         ; D:/project/program/QUARTUS/f4b/MBR.vhd                           ;         ;
+; MAR.vhd                          ; yes             ; User VHDL File                         ; D:/project/program/QUARTUS/f4b/MAR.vhd                           ;         ;
+; IR.vhd                           ; yes             ; User VHDL File                         ; D:/project/program/QUARTUS/f4b/IR.vhd                            ;         ;
+; f4b.bdf                          ; yes             ; User Block Diagram/Schematic File      ; D:/project/program/QUARTUS/f4b/f4b.bdf                           ;         ;
+; CONTROLR.vhd                     ; yes             ; User VHDL File                         ; D:/project/program/QUARTUS/f4b/CONTROLR.vhd                      ;         ;
+; CAR.vhd                          ; yes             ; User VHDL File                         ; D:/project/program/QUARTUS/f4b/CAR.vhd                           ;         ;
+; BR.vhd                           ; yes             ; User VHDL File                         ; D:/project/program/QUARTUS/f4b/BR.vhd                            ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File                         ; D:/project/program/QUARTUS/f4b/ALU.vhd                           ;         ;
+; lpm_rom.tdf                      ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; aglobal211.inc                   ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/aglobal211.inc        ;         ;
+; altrom.tdf                       ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/altrom.tdf            ;         ;
+; memmodes.inc                     ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/others/maxplus2/memmodes.inc        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; altsyncram.inc                   ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/altsyncram.inc        ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_r661.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/project/program/QUARTUS/f4b/db/altsyncram_r661.tdf            ;         ;
+; rom.mif                          ; yes             ; Auto-Found Memory Initialization File  ; D:/project/program/QUARTUS/f4b/rom.mif                           ;         ;
+; lpm_ram_dq.tdf                   ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/lpm_ram_dq.tdf        ;         ;
+; altram.tdf                       ; yes             ; Megafunction                           ; e:/quartus/quartus/libraries/megafunctions/altram.tdf            ;         ;
+; db/altsyncram_7pf1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/project/program/QUARTUS/f4b/db/altsyncram_7pf1.tdf            ;         ;
+; ram.mif                          ; yes             ; Auto-Found Memory Initialization File  ; D:/project/program/QUARTUS/f4b/ram.mif                           ;         ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 89        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 109       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 35        ;
+;     -- 5 input functions                    ; 8         ;
+;     -- 4 input functions                    ; 9         ;
+;     -- <=3 input functions                  ; 57        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 136       ;
+;                                             ;           ;
+; I/O pins                                    ; 147       ;
+; Total MLAB memory bits                      ; 0         ;
+; Total block memory bits                     ; 12288     ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 1         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 104       ;
+; Total fan-out                               ; 1744      ;
+; Average fan-out                             ; 2.97      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                    ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------+-----------------+--------------+
+; |f4b                                         ; 109 (0)             ; 136 (0)                   ; 12288             ; 1          ; 147  ; 0            ; |f4b                                                                                   ; f4b             ; work         ;
+;    |ALU:inst|                                ; 65 (65)             ; 32 (32)                   ; 0                 ; 1          ; 0    ; 0            ; |f4b|ALU:inst                                                                          ; ALU             ; work         ;
+;    |BR:inst2|                                ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |f4b|BR:inst2                                                                          ; BR              ; work         ;
+;    |CAR:inst3|                               ; 12 (12)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |f4b|CAR:inst3                                                                         ; CAR             ; work         ;
+;    |MAR:inst6|                               ; 1 (1)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |f4b|MAR:inst6                                                                         ; MAR             ; work         ;
+;    |MBR:inst7|                               ; 19 (19)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |f4b|MBR:inst7                                                                         ; MBR             ; work         ;
+;    |PC:inst8|                                ; 12 (12)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |f4b|PC:inst8                                                                          ; PC              ; work         ;
+;    |lpm_ram_dq:inst14|                       ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |f4b|lpm_ram_dq:inst14                                                                 ; lpm_ram_dq      ; work         ;
+;       |altram:sram|                          ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |f4b|lpm_ram_dq:inst14|altram:sram                                                     ; altram          ; work         ;
+;          |altsyncram:ram_block|              ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |f4b|lpm_ram_dq:inst14|altram:sram|altsyncram:ram_block                                ; altsyncram      ; work         ;
+;             |altsyncram_7pf1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |f4b|lpm_ram_dq:inst14|altram:sram|altsyncram:ram_block|altsyncram_7pf1:auto_generated ; altsyncram_7pf1 ; work         ;
+;    |lpm_rom:inst13|                          ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |f4b|lpm_rom:inst13                                                                    ; lpm_rom         ; work         ;
+;       |altrom:srom|                          ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |f4b|lpm_rom:inst13|altrom:srom                                                        ; altrom          ; work         ;
+;          |altsyncram:rom_block|              ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |f4b|lpm_rom:inst13|altrom:srom|altsyncram:rom_block                                   ; altsyncram      ; work         ;
+;             |altsyncram_r661:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |f4b|lpm_rom:inst13|altrom:srom|altsyncram:rom_block|altsyncram_r661:auto_generated    ; altsyncram_r661 ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                               ;
++----------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------+
+; Name                                                                                         ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF     ;
++----------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------+
+; lpm_ram_dq:inst14|altram:sram|altsyncram:ram_block|altsyncram_7pf1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 16           ; --           ; --           ; 4096 ; ram.mif ;
+; lpm_rom:inst13|altrom:srom|altsyncram:rom_block|altsyncram_r661:auto_generated|ALTSYNCRAM    ; AUTO ; ROM         ; 256          ; 32           ; --           ; --           ; 8192 ; rom.mif ;
++----------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------+
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Two Independent 18x18           ; 1           ;
+; Total number of DSP blocks      ; 1           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 1           ;
++---------------------------------+-------------+
+
+
++--------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                       ;
++---------------------------------------+----------------------------------+
+; Register name                         ; Reason for Removal               ;
++---------------------------------------+----------------------------------+
+; MBR:inst7|MBR_PC[7]                   ; Merged with MBR:inst7|MBR_MAR[7] ;
+; MBR:inst7|MBR_PC[6]                   ; Merged with MBR:inst7|MBR_MAR[6] ;
+; MBR:inst7|MBR_PC[5]                   ; Merged with MBR:inst7|MBR_MAR[5] ;
+; MBR:inst7|MBR_PC[4]                   ; Merged with MBR:inst7|MBR_MAR[4] ;
+; MBR:inst7|MBR_PC[3]                   ; Merged with MBR:inst7|MBR_MAR[3] ;
+; MBR:inst7|MBR_PC[2]                   ; Merged with MBR:inst7|MBR_MAR[2] ;
+; MBR:inst7|MBR_PC[1]                   ; Merged with MBR:inst7|MBR_MAR[1] ;
+; MBR:inst7|MBR_PC[0]                   ; Merged with MBR:inst7|MBR_MAR[0] ;
+; Total Number of Removed Registers = 8 ;                                  ;
++---------------------------------------+----------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 136   ;
+; Number of registers using Synchronous Clear  ; 64    ;
+; Number of registers using Synchronous Load   ; 24    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 110   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |f4b|MBR:inst7|MBR_OP[5]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |f4b|MAR:inst6|MARout[1]   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |f4b|MBR:inst7|MBR_BR[5]   ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |f4b|CAR:inst3|CARout[0]   ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |f4b|PC:inst8|PCout[4]     ;
+; 10:1               ; 14 bits   ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; Yes        ; |f4b|ALU:inst|ACC[3]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for LPM_ROM:inst13|altrom:srom|altsyncram:rom_block|altsyncram_r661:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                      ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
++---------------------------------+--------------------+------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Source assignments for LPM_RAM_DQ:inst14|altram:sram|altsyncram:ram_block|altsyncram_7pf1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                         ;
++---------------------------------+--------------------+------+--------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                          ;
++---------------------------------+--------------------+------+--------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_ROM:inst13 ;
++------------------------+--------------+---------------------+
+; Parameter Name         ; Value        ; Type                ;
++------------------------+--------------+---------------------+
+; LPM_WIDTH              ; 32           ; Untyped             ;
+; LPM_WIDTHAD            ; 8            ; Untyped             ;
+; LPM_NUMWORDS           ; 256          ; Untyped             ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED   ; Untyped             ;
+; LPM_OUTDATA            ; UNREGISTERED ; Untyped             ;
+; LPM_FILE               ; rom.mif      ; Untyped             ;
+; DEVICE_FAMILY          ; Cyclone V    ; Untyped             ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE      ;
++------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_RAM_DQ:inst14 ;
++------------------------+--------------+------------------------+
+; Parameter Name         ; Value        ; Type                   ;
++------------------------+--------------+------------------------+
+; LPM_WIDTH              ; 16           ; Untyped                ;
+; LPM_WIDTHAD            ; 8            ; Untyped                ;
+; LPM_NUMWORDS           ; 256          ; Untyped                ;
+; LPM_INDATA             ; REGISTERED   ; Untyped                ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED   ; Untyped                ;
+; LPM_OUTDATA            ; UNREGISTERED ; Untyped                ;
+; LPM_FILE               ; ram.mif      ; Untyped                ;
+; USE_EAB                ; ON           ; Untyped                ;
+; DEVICE_FAMILY          ; Cyclone V    ; Untyped                ;
+; CBXI_PARAMETER         ; NOTHING      ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE         ;
++------------------------+--------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 136                         ;
+;     ENA               ; 48                          ;
+;     ENA SCLR          ; 38                          ;
+;     ENA SCLR SLD      ; 16                          ;
+;     ENA SLD           ; 8                           ;
+;     SCLR              ; 10                          ;
+;     plain             ; 16                          ;
+; arriav_lcell_comb     ; 109                         ;
+;     arith             ; 33                          ;
+;         1 data inputs ; 9                           ;
+;         3 data inputs ; 24                          ;
+;     normal            ; 76                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 9                           ;
+;         5 data inputs ; 8                           ;
+;         6 data inputs ; 35                          ;
+; arriav_mac            ; 1                           ;
+; boundary_port         ; 147                         ;
+; stratixv_ram_block    ; 48                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.60                        ;
+; Average LUT depth     ; 2.03                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+    Info: Processing started: Sat Nov 19 08:44:51 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off f4b -c f4b
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
+    Info (12022): Found design unit 1: rom-SYN File: D:/project/program/QUARTUS/f4b/rom.vhd Line: 53
+    Info (12023): Found entity 1: rom File: D:/project/program/QUARTUS/f4b/rom.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
+    Info (12022): Found design unit 1: ram-SYN File: D:/project/program/QUARTUS/f4b/ram.vhd Line: 55
+    Info (12023): Found entity 1: ram File: D:/project/program/QUARTUS/f4b/ram.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
+    Info (12022): Found design unit 1: PC-behave File: D:/project/program/QUARTUS/f4b/PC.vhd Line: 10
+    Info (12023): Found entity 1: PC File: D:/project/program/QUARTUS/f4b/PC.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mbr.vhd
+    Info (12022): Found design unit 1: MBR-behave File: D:/project/program/QUARTUS/f4b/MBR.vhd Line: 14
+    Info (12023): Found entity 1: MBR File: D:/project/program/QUARTUS/f4b/MBR.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mar.vhd
+    Info (12022): Found design unit 1: MAR-behave File: D:/project/program/QUARTUS/f4b/MAR.vhd Line: 9
+    Info (12023): Found entity 1: MAR File: D:/project/program/QUARTUS/f4b/MAR.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
+    Info (12022): Found design unit 1: IR-behave File: D:/project/program/QUARTUS/f4b/IR.vhd Line: 8
+    Info (12023): Found entity 1: IR File: D:/project/program/QUARTUS/f4b/IR.vhd Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file f4b.bdf
+    Info (12023): Found entity 1: f4b
+Info (12021): Found 2 design units, including 1 entities, in source file controlr.vhd
+    Info (12022): Found design unit 1: CONTROLR-behave File: D:/project/program/QUARTUS/f4b/CONTROLR.vhd Line: 14
+    Info (12023): Found entity 1: CONTROLR File: D:/project/program/QUARTUS/f4b/CONTROLR.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file car.vhd
+    Info (12022): Found design unit 1: CAR-behave File: D:/project/program/QUARTUS/f4b/CAR.vhd Line: 11
+    Info (12023): Found entity 1: CAR File: D:/project/program/QUARTUS/f4b/CAR.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file br.vhd
+    Info (12022): Found design unit 1: BR-behave File: D:/project/program/QUARTUS/f4b/BR.vhd Line: 9
+    Info (12023): Found entity 1: BR File: D:/project/program/QUARTUS/f4b/BR.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: ALU-behave File: D:/project/program/QUARTUS/f4b/ALU.vhd Line: 11
+    Info (12023): Found entity 1: ALU File: D:/project/program/QUARTUS/f4b/ALU.vhd Line: 4
+Info (12127): Elaborating entity "f4b" for the top level hierarchy
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst"
+Warning (10492): VHDL Process Statement warning at ALU.vhd(34): signal "ACC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/project/program/QUARTUS/f4b/ALU.vhd Line: 34
+Info (12128): Elaborating entity "CONTROLR" for hierarchy "CONTROLR:inst4"
+Info (12128): Elaborating entity "LPM_ROM" for hierarchy "LPM_ROM:inst13"
+Info (12130): Elaborated megafunction instantiation "LPM_ROM:inst13"
+Info (12133): Instantiated megafunction "LPM_ROM:inst13" with the following parameter:
+    Info (12134): Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info (12134): Parameter "LPM_FILE" = "rom.mif"
+    Info (12134): Parameter "LPM_NUMWORDS" = "256"
+    Info (12134): Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+    Info (12134): Parameter "LPM_WIDTHAD" = "8"
+Info (12128): Elaborating entity "altrom" for hierarchy "LPM_ROM:inst13|altrom:srom" File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
+Info (12131): Elaborated megafunction instantiation "LPM_ROM:inst13|altrom:srom", which is child of megafunction instantiation "LPM_ROM:inst13" File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 55
+Info (12128): Elaborating entity "altsyncram" for hierarchy "LPM_ROM:inst13|altrom:srom|altsyncram:rom_block" File: e:/quartus/quartus/libraries/megafunctions/altrom.tdf Line: 89
+Info (12131): Elaborated megafunction instantiation "LPM_ROM:inst13|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "LPM_ROM:inst13" File: e:/quartus/quartus/libraries/megafunctions/altrom.tdf Line: 89
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_r661.tdf
+    Info (12023): Found entity 1: altsyncram_r661 File: D:/project/program/QUARTUS/f4b/db/altsyncram_r661.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_r661" for hierarchy "LPM_ROM:inst13|altrom:srom|altsyncram:rom_block|altsyncram_r661:auto_generated" File: e:/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "CAR" for hierarchy "CAR:inst3"
+Info (12128): Elaborating entity "IR" for hierarchy "IR:inst5"
+Info (12128): Elaborating entity "MBR" for hierarchy "MBR:inst7"
+Info (12128): Elaborating entity "LPM_RAM_DQ" for hierarchy "LPM_RAM_DQ:inst14"
+Info (12130): Elaborated megafunction instantiation "LPM_RAM_DQ:inst14"
+Info (12133): Instantiated megafunction "LPM_RAM_DQ:inst14" with the following parameter:
+    Info (12134): Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info (12134): Parameter "LPM_FILE" = "ram.mif"
+    Info (12134): Parameter "LPM_INDATA" = "REGISTERED"
+    Info (12134): Parameter "LPM_NUMWORDS" = "256"
+    Info (12134): Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info (12134): Parameter "LPM_WIDTH" = "16"
+    Info (12134): Parameter "LPM_WIDTHAD" = "8"
+Info (12128): Elaborating entity "altram" for hierarchy "LPM_RAM_DQ:inst14|altram:sram" File: e:/quartus/quartus/libraries/megafunctions/lpm_ram_dq.tdf Line: 106
+Warning (287001): Assertion warning: altram does not support Cyclone V device family -- attempting best-case memory conversions, but power-up states and read during write behavior will be different for Cyclone V devices File: e:/quartus/quartus/libraries/megafunctions/altram.tdf Line: 212
+Info (12131): Elaborated megafunction instantiation "LPM_RAM_DQ:inst14|altram:sram", which is child of megafunction instantiation "LPM_RAM_DQ:inst14" File: e:/quartus/quartus/libraries/megafunctions/lpm_ram_dq.tdf Line: 106
+Info (12128): Elaborating entity "altsyncram" for hierarchy "LPM_RAM_DQ:inst14|altram:sram|altsyncram:ram_block" File: e:/quartus/quartus/libraries/megafunctions/altram.tdf Line: 103
+Info (12131): Elaborated megafunction instantiation "LPM_RAM_DQ:inst14|altram:sram|altsyncram:ram_block", which is child of megafunction instantiation "LPM_RAM_DQ:inst14" File: e:/quartus/quartus/libraries/megafunctions/altram.tdf Line: 103
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7pf1.tdf
+    Info (12023): Found entity 1: altsyncram_7pf1 File: D:/project/program/QUARTUS/f4b/db/altsyncram_7pf1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_7pf1" for hierarchy "LPM_RAM_DQ:inst14|altram:sram|altsyncram:ram_block|altsyncram_7pf1:auto_generated" File: e:/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "MAR" for hierarchy "MAR:inst6"
+Info (12128): Elaborating entity "PC" for hierarchy "PC:inst8"
+Info (12128): Elaborating entity "BR" for hierarchy "BR:inst2"
+Warning (13044): Always-enabled tri-state buffer(s) removed
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[31]" to the node "CONTROL[31]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[30]" to the node "CONTROL[30]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[29]" to the node "CONTROL[29]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[28]" to the node "CONTROL[28]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[27]" to the node "CONTROL[27]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[26]" to the node "CONTROL[26]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[25]" to the node "CONTROL[25]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[24]" to the node "CONTROL[24]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[23]" to the node "CONTROL[23]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[22]" to the node "CONTROL[22]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[21]" to the node "CONTROL[21]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[20]" to the node "CONTROL[20]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[19]" to the node "CONTROL[19]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[18]" to the node "CONTROL[18]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[17]" to the node "CONTROL[17]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[16]" to the node "CONTROL[16]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[15]" to the node "CONTROL[15]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[14]" to the node "CONTROL[14]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[13]" to the node "CONTROL[13]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[12]" to the node "CONTROL[12]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[11]" to the node "CONTROL[11]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[10]" to the node "CONTROL[10]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[9]" to the node "CONTROL[9]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[8]" to the node "CONTROL[8]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[7]" to the node "CONTROL[7]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[6]" to the node "CONTROL[6]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[5]" to the node "CONTROL[5]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[4]" to the node "CONTROL[4]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[3]" to the node "CONTROL[3]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[2]" to the node "CONTROL[2]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[1]" to the node "CONTROL[1]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[0]" to the node "CONTROL[0]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[21]" to the node "MBR:inst7|MBR_OP[5]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[19]" to the node "MAR:inst6|MARout[1]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[16]" to the node "MBR:inst7|MBR_BR[5]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[7]" to the node "CAR:inst3|CARout[7]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[6]" to the node "CAR:inst3|CARout[6]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[5]" to the node "CAR:inst3|CARout[5]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[4]" to the node "CAR:inst3|CARout[4]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[3]" to the node "CAR:inst3|CARout[3]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[2]" to the node "CAR:inst3|CARout[2]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[1]" to the node "CAR:inst3|CARout[1]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst13|otri[0]" to the node "CAR:inst3|CARout[0]" into a wire File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[26]" to the node "CAR:inst3|Equal2" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[25]" to the node "CAR:inst3|Equal2" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[24]" to the node "CAR:inst3|Equal2" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[23]" to the node "CAR:inst3|Equal2" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[22]" to the node "BR:inst2|BRout[0]" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[20]" to the node "MBR:inst7|temp" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[18]" to the node "MAR:inst6|MARout[1]" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[17]" to the node "lpm_ram_dq:inst14|altram:sram|altsyncram:ram_block|altsyncram_7pf1:auto_generated|q_a[0]" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[15]" to the node "PC:inst8|Equal0" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[14]" to the node "PC:inst8|Equal0" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[13]" to the node "PC:inst8|Equal0" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[12]" to the node "PC:inst8|Equal0" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[11]" to the node "ALU:inst|ACC" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[10]" to the node "PC:inst8|PCout[4]" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[9]" to the node "PC:inst8|PCout[4]" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst13|otri[8]" to the node "PC:inst8|PCout[4]" into an OR gate File: e:/quartus/quartus/libraries/megafunctions/lpm_rom.tdf Line: 68
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 417 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 144 output pins
+    Info (21061): Implemented 221 logic cells
+    Info (21064): Implemented 48 RAM segments
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
+    Info: Peak virtual memory: 4922 megabytes
+    Info: Processing ended: Sat Nov 19 08:45:16 2022
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:45
+
+

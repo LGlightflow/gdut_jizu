@@ -1,0 +1,194 @@
+Determining the location of the ModelSim executable...
+
+Using: E:\quartus\intelFPGA\20.1\modelsim_ase\win32aloem
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both Questa Intel FPGA Edition and ModelSim executables are available, Questa Intel FPGA Edition will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off f3 -c f3 --vector_source="D:/project/program/QUARTUS/f3/Waveform.vwf" --testbench_file="D:/project/program/QUARTUS/f3/simulation/qsim/Waveform.vwf.vht"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+    Info: Copyright (C) 2022  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Sat Oct 22 09:51:02 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off f3 -c f3 --vector_source=D:/project/program/QUARTUS/f3/Waveform.vwf --testbench_file=D:/project/program/QUARTUS/f3/simulation/qsim/Waveform.vwf.vht
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/project/program/QUARTUS/f3/simulation/qsim/" f3 -c f3
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+    Info: Copyright (C) 2022  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Sat Oct 22 09:51:04 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/project/program/QUARTUS/f3/simulation/qsim/ f3 -c f3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file f3.vho in folder "D:/project/program/QUARTUS/f3/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4753 megabytes
+    Info: Processing ended: Sat Oct 22 09:51:06 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+D:/project/program/QUARTUS/f3/simulation/qsim/f3.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+E:/quartus/intelFPGA/20.1/modelsim_ase/win32aloem/vsim -c -do f3.do
+
+Reading pref.tcl
+
+
+# 2020.1
+
+
+# do f3.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+
+# Start time: 09:51:08 on Oct 22,2022
+
+# vcom -work work f3.vho 
+
+# -- Loading package STANDARD
+
+# -- Loading package TEXTIO
+
+# -- Loading package std_logic_1164
+
+# -- Loading package VITAL_Timing
+
+# -- Loading package VITAL_Primitives
+
+# -- Loading package dffeas_pack
+
+# -- Loading package altera_primitives_components
+
+# -- Loading package altera_lnsim_components
+
+# -- Loading package cyclonev_atom_pack
+
+# -- Loading package cyclonev_components
+
+# -- Compiling entity SINGT
+
+# -- Compiling architecture structure of SINGT
+
+# End time: 09:51:09 on Oct 22,2022, Elapsed time: 0:00:01
+
+# Errors: 0, Warnings: 0
+
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+
+# Start time: 09:51:09 on Oct 22,2022
+
+# vcom -work work Waveform.vwf.vht 
+
+# -- Loading package STANDARD
+
+# -- Loading package TEXTIO
+
+# -- Loading package std_logic_1164
+
+# -- Compiling entity SINGT_vhd_vec_tst
+
+# -- Compiling architecture SINGT_arch of SINGT_vhd_vec_tst
+
+# End time: 09:51:09 on Oct 22,2022, Elapsed time: 0:00:00
+
+# Errors: 0, Warnings: 0
+
+# vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.SINGT_vhd_vec_tst 
+# Start time: 09:51:09 on Oct 22,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.singt_vhd_vec_tst(singt_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading altera_lnsim.altera_lnsim_components
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.singt(structure)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_jtag(behavior)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cyclonev.cyclonev_clkena(behavior)
+# Loading cyclonev.cyclonev_ram_block(block_arch)
+# Loading sv_std.std
+# Loading altera_lnsim.generic_m10k
+# Loading altera_lnsim.altera_lnsim_functions
+# Loading altera_lnsim.common_28nm_ram_block
+# Loading altera_lnsim.common_28nm_ram_register
+# Loading altera_lnsim.common_28nm_ram_pulse_generator
+# ** Warning: Design size of 65999 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+
+# after#34
+
+# End time: 09:51:10 on Oct 22,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading D:/project/program/QUARTUS/f3/Waveform.vwf...
+
+Reading D:/project/program/QUARTUS/f3/simulation/qsim/f3.msim.vcd...
+
+Processing channel transitions... 
+
+Writing the resulting VWF to D:/project/program/QUARTUS/f3/simulation/qsim/f3_20221022095111.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

@@ -1,0 +1,107 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/project/program/QUARTUS/f3/simulation/qsim
+Esingt
+Z1 w1666403466
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 3HQPc5MVbmOPN?>a5EBYj2
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 jZ]H46BQLgIP5mfRTO`3B1
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ^Ch;U@;bMk1;>A2B<UV`k2
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z10 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
+!i122 4
+R0
+Z11 8f3.vho
+Z12 Ff3.vho
+l0
+L39 1
+VTdPDb96fW<:QT@R1J<Wd?0
+!s100 Mj0kn70[fFczKTKO3VeV]2
+Z13 OV;C;2020.1;71
+32
+Z14 !s110 1666403468
+!i10b 1
+Z15 !s108 1666403468.000000
+Z16 !s90 -work|work|f3.vho|
+Z17 !s107 f3.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 5 singt 0 22 TdPDb96fW<:QT@R1J<Wd?0
+!i122 4
+l440
+L66 6208
+VnBj2m79gRS4ZAH63gdIVA0
+!s100 C]>7X@VKDza0KebOAQZ5?2
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Esingt_vhd_vec_tst
+Z20 w1666403463
+R8
+R9
+!i122 5
+R0
+Z21 8Waveform.vwf.vht
+Z22 FWaveform.vwf.vht
+l0
+L32 1
+V[:_FF@Ph^OeRhClaF9ocC1
+!s100 N=njGV3DW=j4F39F:MAYQ3
+R13
+32
+Z23 !s110 1666403469
+!i10b 1
+Z24 !s108 1666403469.000000
+Z25 !s90 -work|work|Waveform.vwf.vht|
+Z26 !s107 Waveform.vwf.vht|
+!i113 1
+R18
+R19
+Asingt_arch
+R8
+R9
+Z27 DEx4 work 17 singt_vhd_vec_tst 0 22 [:_FF@Ph^OeRhClaF9ocC1
+!i122 5
+l45
+L34 35
+V==F5nk6ZO6^fS>gR=B77c3
+!s100 Tg3JdNOZT;1WNMVdE[jhg3
+R13
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R18
+R19

@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Sat Nov 19 08:45:16 2022
+Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Revision Name : f4b
+Top-level Entity Name : f4b
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 136
+Total pins : 147
+Total virtual pins : 0
+Total block memory bits : 12,288
+Total DSP Blocks : 1
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

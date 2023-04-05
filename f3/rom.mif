@@ -1,0 +1,88 @@
+-- Copyright (C) 2022  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and any partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=24;
+DEPTH=64;
+
+ADDRESS_RADIX=BIN;
+DATA_RADIX=UNS;
+
+CONTENT BEGIN
+	0000000  :   255;
+	0000001  :   254;
+	0000010  :   252;
+	0000011  :   249;
+	0000100  :   245;
+	0000101  :   239;
+	0000110  :   233;
+	0000111  :   225;
+	0001000  :   217;
+	0001001  :   207;
+	0001010  :   197;
+	0001011  :   186;
+	0001100  :   174;
+	0001101  :   162;
+	0001110  :   150;
+	0001111  :   137;
+	0010000  :   124;
+	0010001  :   112;
+	0010010  :   99;
+	0010011  :   87;
+	0010100  :   75;
+	0010101  :   64;
+	0010110  :   53;
+	0010111  :   43;
+	0011000  :   34;
+	0011001  :   26;
+	0011010  :   19;
+	0011011  :   13;
+	0011100  :   8;
+	0011101  :   4;
+	0011110  :   1;
+	[0011111..0100000]  :   0;
+	0100001  :   1;
+	0100010  :   4;
+	0100011  :   8;
+	0100100  :   13;
+	0100101  :   19;
+	0100110  :   26;
+	0100111  :   34;
+	0101000  :   43;
+	0101001  :   53;
+	0101010  :   64;
+	0101011  :   75;
+	0101100  :   87;
+	0101101  :   99;
+	0101110  :   112;
+	0101111  :   124;
+	0110000  :   137;
+	0110001  :   150;
+	0110010  :   162;
+	0110011  :   174;
+	0110100  :   186;
+	0110101  :   197;
+	0110110  :   207;
+	0110111  :   217;
+	0111000  :   225;
+	0111001  :   233;
+	0111010  :   239;
+	0111011  :   245;
+	0111100  :   249;
+	0111101  :   252;
+	0111110  :   254;
+	0111111  :   255;
+END;

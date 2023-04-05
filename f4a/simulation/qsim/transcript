@@ -1,0 +1,63 @@
+# do f4a.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:01:31 on Dec 23,2022
+# vcom -work work f4a.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package altera_lnsim_components
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity top_level
+# -- Compiling architecture structure of top_level
+# End time: 23:01:32 on Dec 23,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:01:33 on Dec 23,2022
+# vcom -work work Waveform.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity top_level_vhd_vec_tst
+# -- Compiling architecture top_level_arch of top_level_vhd_vec_tst
+# End time: 23:01:33 on Dec 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.top_level_vhd_vec_tst 
+# Start time: 23:01:36 on Dec 23,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_level_vhd_vec_tst(top_level_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading altera_lnsim.altera_lnsim_components
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.top_level(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_clkena(behavior)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cyclonev.cyclonev_mac(behavior)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /top_level_vhd_vec_tst/i1/\aluu|Mult1~8\/inst/<protected> File: $MODEL_TECH/../altera/vhdl/src/cyclonev/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /top_level_vhd_vec_tst/i1/\aluu|Mult1~8\/inst/<protected> File: $MODEL_TECH/../altera/vhdl/src/cyclonev/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /top_level_vhd_vec_tst/i1/\aluu|Mult0~8\/inst/<protected> File: $MODEL_TECH/../altera/vhdl/src/cyclonev/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /top_level_vhd_vec_tst/i1/\aluu|Mult0~8\/inst/<protected> File: $MODEL_TECH/../altera/vhdl/src/cyclonev/mentor/cyclonev_atoms_ncrypt.v Line: 38
+# ** Warning: Design size of 225394 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# after#34
+# End time: 23:01:39 on Dec 23,2022, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 5

@@ -1,0 +1,89 @@
+-- Copyright (C) 2022  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and any partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=32;
+DEPTH=256;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+	000  :   00018108;
+	001  :   0000ED82;
+	002  :   0000C050;
+	003  :   0000E004;
+	004  :   0000B005;
+	005  :   0001A206;
+	006  :   00959A01;
+	007  :   0000E00F;
+	008  :   0000ED8A;
+	009  :   0000EDBC;
+	00A  :   0000A008;
+	00B  :   00008001;
+	[00C..00D]  :   00062009;
+	00E  :   00070A08;
+	00F  :   00038201;
+	010  :   00001001;
+	011  :   0000ED83;
+	012  :   0000ED87;
+	013  :   0000ED99;
+	014  :   0000ED9C;
+	015  :   0031821D;
+	016  :   0031821F;
+	017  :   00318221;
+	018  :   00318223;
+	019  :   0000E01A;
+	01A  :   0000A01B;
+	01B  :   00070A01;
+	01C  :   0000D181;
+	01D  :   0021881E;
+	01E  :   00019801;
+	01F  :   00298820;
+	020  :   00019801;
+	021  :   00118822;
+	022  :   00019801;
+	023  :   00198824;
+	024  :   00019801;
+	025  :   00018110;
+	026  :   00000002;
+	027  :   00000003;
+	028  :   00000004;
+	029  :   00000005;
+	02A  :   00000006;
+	02B  :   00000007;
+	02C  :   00000008;
+	02D  :   00000009;
+	02E  :   0000000A;
+	02F  :   0000000B;
+	030  :   0000000C;
+	031  :   0000000D;
+	032  :   0000000E;
+	033  :   0000000F;
+	034  :   00000010;
+	035  :   00000011;
+	036  :   00000012;
+	037  :   00000013;
+	038  :   00000014;
+	039  :   00000015;
+	03A  :   00000016;
+	03B  :   00000017;
+	03C  :   00000018;
+	03D  :   00000019;
+	03E  :   0000001A;
+	03F  :   0000001C;
+	[040..0FF]  :   00000000;
+END;

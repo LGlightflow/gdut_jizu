@@ -1,0 +1,70 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity  alu  is                              -----实体声明外部接口 
+port (
+op: in STD_LOGIC_VECTOR(3 downto 0);    -- 选择控制运算类型
+accD: in STD_LOGIC_VECTOR(7 downto 0);  -- 累加器的8位数据
+dBus: in STD_LOGIC_VECTOR(7 downto 0);  -- 数据总线用于运算
+result: out STD_LOGIC_VECTOR(7 downto 0);       --结果的输出
+accZ: out STD_LOGIC); 
+end alu; 
+
+entity program_counter is 
+    port ( 
+        clk, en_A, ld, inc, reset: in STD_LOGIC; 
+        aBus: out STD_LOGIC_VECTOR(7 downto 0);  --数据总线输出
+        dBus: in STD_LOGIC_VECTOR(7 downto 0 );  --数据总线输入
+end program_counter;
+
+entity accumulator is 
+    port ( 
+        clk, en_D, ld, selAlu, reset: in STD_LOGIC;        ----时钟信号
+        aluD: in STD_LOGIC_VECTOR(7 downto 0); 
+        dBus: inout STD_LOGIC_VECTOR(7 downto 0); 
+        q: out STD_LOGIC_VECTOR(7 downto 0) 
+); 
+end accumulator;
+
+entity instruction_register is 
+    port ( 
+        clk, en_A, en_D, ld, reset: in STD_LOGIC; 
+        aBus: out STD_LOGIC_VECTOR(7 downto 0);     --------数据总线输出
+        dBus: inout STD_LOGIC_VECTOR(7 downto 0); 
+        load, store, add, neg,sub,mul,and1,or1,not1, halt, branch: out STD_LOGIC   ); 
+end instruction_register; 
+architecture irArch of instruction_register is 
+signal irReg: STD_LOGIC_VECTOR(7 downto 0); 
+
+entity ram is 
+    port( r_w,en,reset:inSTD_LOGIC;            -------------外部接口 
+        aBus: in STD_LOGIC_VECTOR(7 downto 0);     
+        dBus: inout STD_LOGIC_VECTOR(7 downto 0) 
+    ); 
+end ram; 
+architecture ramArch of ram is 
+type ram_typ is array(0 to 63) of STD_LOGIC_VECTOR(7 downto 0); 
+signal ram: ram_typ; 
+
+entity program_counter is                      ----对控制器的实体说明
+    port ( 
+        clk, en_A, ld, inc, reset: in STD_LOGIC;        ----时钟信号
+        aBus: out STD_LOGIC_VECTOR(7 downto 0); 
+        dBus: in STD_LOGIC_VECTOR(7 downto 0)     ); 
+end program_counter; 
+architecture pcArch of program_counter is 
+signal pcReg: STD_LOGIC_VECTOR(7 downto 0); 
+
+entity top_level is                          ----实体声名
+    port ( 
+        clk, reset:   in  STD_LOGIC; 
+        abusX:    out STD_LOGIC_VECTOR(7 downto 0); -------数据总线
+        dbusX:     out STD_LOGIC_VECTOR(7 downto 0); 
+        mem_enDX, mem_rwX:   out STD_LOGIC; 
+        pc_enAX, pc_ldX, pc_incX: out STD_LOGIC;    --------寄存器
+        ir_enAX, ir_enDX, ir_ldX: out STD_LOGIC; 
+        acc_enDX, acc_ldX, acc_selAluX: out STD_LOGIC; --------累加器
+        acc_QX:    out STD_LOGIC_VECTOR(7 downto 0);
+        alu_accZX:   out STD_LOGIC;                  ---------运算器
+        alu_opX:   out STD_LOGIC_VECTOR(3 downto 0)   ); 
+end top_level; 

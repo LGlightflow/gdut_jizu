@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sat Oct 22 09:37:46 2022
+Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Revision Name : f3
+Top-level Entity Name : SINGT
+Family : Cyclone V
+Device : 5CGXFC7C7F23C8
+Timing Models : Final
+Logic utilization (in ALMs) : 105 / 56,480 ( < 1 % )
+Total registers : 156
+Total pins : 9 / 268 ( 3 % )
+Total virtual pins : 0
+Total block memory bits : 1,536 / 7,024,640 ( < 1 % )
+Total RAM Blocks : 2 / 686 ( < 1 % )
+Total DSP Blocks : 0 / 156 ( 0 % )
+Total HSSI RX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 6 ( 0 % )
+Total HSSI TX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 6 ( 0 % )
+Total PLLs : 0 / 13 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )
